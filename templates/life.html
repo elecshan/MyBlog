@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block headblock %}
+    <!-- 以下内容为另一个模板的插件 -->
+
+    <!-- Google Webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/style.css" id="theme-styles">
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+
+{% endblock %}
+
+{% block mainbody %}
+    <div class="widewrapper subheader">
+        <div class="container">
+            <div class="clean-breadcrumb">
+                <a href="home.html">Blog</a>
+            </div>
+
+            <div class="clean-searchbox">
+                <form action="#" method="get" accept-charset="utf-8">
+                    <input class="searchfield" id="searchbox" type="text" placeholder="Search">
+                    <button class="searchbutton" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="widewrapper main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 blog-main">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <article class=" blog-teaser">
+                                <header>
+                                    <img src="/static/img/1.jpg" alt="">
+                                    <h3><a href="blogPage.html?id={{ blog1.id }}">{{ blog1.title }}</a></h3>
+                                    <span class="meta">{{ blog1.date }}, {{ blog1.auth }}</span>
+                                    <hr>
+                                </header>
+                                <div class="body">
+                                    {{ blog1.article }}
+                                </div>
+                                <div class="clearfix">
+                                    <a href="blogPage.html?id={{ blog1.id }}" class="btn btn-clean-one">Read more</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <article class="blog-teaser">
+                                <header>
+                                    <img src="/static/img/2.jpg" alt="">
+                                    <h3><a href="blogPage.html?id={{ blog2.id }}">{{ blog2.title }}</a></h3>
+                                    <span class="meta">{{ blog2.date }}, {{ blog2.auth }}</span>
+                                    <hr>
+                                </header>
+                                <div class="body">
+                                    {{ blog2.article }}
+                                </div>
+                                <div class="clearfix">
+                                    <a href="blogPage.html?id={{ blog2.id }}" class="btn btn-clean-one">Read more</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >手机网站模板</a></div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <article class="blog-teaser">
+                                <header>
+                                    <img src="/static/img/3.jpg" alt="">
+                                    <h3><a href="blogPage.html?id={{ blog3.id }}">{{ blog3.title }}</a></h3>
+                                    <span class="meta">{{ blog3.date }}, {{ blog3.auth }}</span>
+                                    <hr>
+                                </header>
+                                <div class="body">
+                                    {{ blog3.article }}
+                                </div>
+                                <div class="clearfix">
+                                    <a href="blogPage.html?id={{ blog3.id }}" class="btn btn-clean-one">Read more</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <article class="blog-teaser">
+                                <header>
+                                    <img src="/static/img/4.jpg" alt="">
+                                   <h3><a href="blogPage.html?id={{ blog4.id }}">{{ blog4.title }}</a></h3>
+                                    <span class="meta">{{ blog4.date }}, {{ blog4.auth }}</span>
+                                    <hr>
+                                </header>
+                                <div class="body">
+                                    {{ blog4.article }}
+                                </div>
+                                <div class="clearfix">
+                                    <a href="blogPage.html?id={{ blog4.id }}" class="btn btn-clean-one">Read more</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="paging">
+                        <a href="#" class="older"><i>Older Post</i></a>
+                    </div>
+                </div>
+                <aside class="col-md-4 blog-aside">
+
+                    <div class="aside-widget">
+                        <header>
+                            <h3>Featured Post</h3>
+                        </header>
+                        <div class="body">
+                            <ul class="clean-list">
+                                <li><a href="">Clean - Responsive HTML5 Template</a></li>
+                                <li><a href="">Responsive Pricing Table</a></li>
+                                <li><a href="">Yellow HTML5 Template</a></li>
+                                <li><a href="">Blackor Responsive Theme</a></li>
+                                <li><a href="">Portfolio Bootstrap Template</a></li>
+                                <li><a href="">Clean Slider Template</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="aside-widget">
+                        <header>
+                            <h3>Related Post</h3>
+                        </header>
+                        <div class="body">
+                            <ul class="clean-list">
+                                <li><a href="">Blackor Responsive Theme</a></li>
+                                <li><a href="">Portfolio Bootstrap Template</a></li>
+                                <li><a href="">Clean Slider Template</a></li>
+                                <li><a href="">Clean - Responsive HTML5 Template</a></li>
+                                <li><a href="">Responsive Pricing Table</a></li>
+                                <li><a href="">Yellow HTML5 Template</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="aside-widget">
+                        <header>
+                            <h3>Tags</h3>
+                        </header>
+                        <div class="body clearfix">
+                            <ul class="tags">
+                                <li><a href="#">HTML5</a></li>
+                                <li><a href="#">CSS3</a></li>
+                                <li><a href="#">COMPONENTS</a></li>
+                                <li><a href="#">TEMPLATE</a></li>
+                                <li><a href="#">PLUGIN</a></li>
+                                <li><a href="#">BOOTSTRAP</a></li>
+                                <li><a href="#">TUTORIAL</a></li>
+                                <li><a href="#">UI/UX</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footblock %}
+    <!-- 以下内容为另一个模板的配置 -->
+    <script src="/static/js/modernizr.js"></script>
+{% endblock %}

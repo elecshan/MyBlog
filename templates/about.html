@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block headblock %}
+    <!-- Google Webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/style.css" id="theme-styles">
+
+    <!--[if lt IE 9]>
+        <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
+    <![endif]-->
+{% endblock %}
+
+{% block mainbody %}
+    <div class="widewrapper main">
+        <div class="container about">
+            <h2>Hello, My name is <span class="about-bold">  John Doe</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus inventore magni ratione perferendis ex molestiae cum reiciendis perspiciatis consequuntur, nihil ducimus corrupti! Ipsum nesciunt ipsa nobis obcaecati labore, rem recusandae?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui quo sint asperiores, ut doloremque eum commodi, odit nisi sed repellendus earum recusandae pariatur consectetur minus rerum, magni dolores officiis magnam.</p>
+
+            <div class="about-button">
+                <a class="btn btn-xlarge btn-clean-one" href="contact.html">Contact Me</a>
+            </div>
+            <hr>
+        </div>
+    </div>
+{% endblock %}

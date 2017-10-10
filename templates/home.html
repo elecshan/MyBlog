@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block headblock %}
+    <!-- Style -->
+    <link href="/static/css/home.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="/static/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="/static/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="/static/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="/static/plugins/Lightbox/dist/css/lightbox.css" rel="stylesheet">
+    <link href="/static/plugins/Icons/et-line-font/style.css" rel="stylesheet">
+    <link href="/static/plugins/animate.css/animate.css" rel="stylesheet">
+{% endblock %}
+
+{% block mainbody %}
+    <div id="owl-hero" class="owl-carousel owl-theme">
+        <div class="item" style="background-image: url(/static/img/sliders/Slide.jpg)">
+            <div class="caption">
+                <h6>AI / Creativity/ Life Philosophy/ Universe</h6>
+                <h1>Creative <span>Design</span></h1>
+                <a class="btn btn-transparent" href="#">Learn More</a><a class="btn btn-light" href="life.html">Blog</a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(/static/img/sliders/Slide2.jpg)">
+            <div class="caption">
+                <h6>AI / Creativity/ Life Philosophy/ Universe</h6>
+                <h1>Way to <span>Full-stack</span></h1>
+                <a class="btn btn-transparent" href="#">Learn More</a><a class="btn btn-light" href="life.html">Blog</a>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(/static/img/sliders/Slide3.jpg)">
+            <div class="caption">
+                <h6>AI / Creativity/ Life Philosophy/ Universe</h6>
+                <h1>Explore <span>Universe</span></h1>
+                <a class="btn btn-transparent" href="#">Learn More</a><a class="btn btn-light" href="life.html">Blog</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footblock %}
+{% endblock %}
