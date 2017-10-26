@@ -8,7 +8,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/static/css/style.css" id="theme-styles">
-
+{#    <style type="text/css">#}
+{#        body {background: url("/static/img/background/life.jpg") center top #075498;}#}
+{#    </style>#}
     <!--[if lt IE 9]>
         <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
     <![endif]-->
@@ -40,13 +42,13 @@
                         <div class="col-md-6 col-sm-6">
                             <article class=" blog-teaser">
                                 <header>
-                                    <img src="/static/img/1.jpg" alt="">
+                                    <img src="/static/upload/{{ blog1.picture }}" alt="">
                                     <h3><a href="blogPage.html?id={{ blog1.id }}">{{ blog1.title }}</a></h3>
                                     <span class="meta">{{ blog1.date }}, {{ blog1.auth }}</span>
                                     <hr>
                                 </header>
                                 <div class="body">
-                                    {{ blog1.article }}
+                                    <a href="blogPage.html?id={{ blog1.id }}">{{ blog1.introduction | safe }}...</a>
                                 </div>
                                 <div class="clearfix">
                                     <a href="blogPage.html?id={{ blog1.id }}" class="btn btn-clean-one">Read more</a>
@@ -56,13 +58,13 @@
                         <div class="col-md-6 col-sm-6">
                             <article class="blog-teaser">
                                 <header>
-                                    <img src="/static/img/2.jpg" alt="">
+                                    <img src="/static/upload/{{ blog2.picture }}" alt="">
                                     <h3><a href="blogPage.html?id={{ blog2.id }}">{{ blog2.title }}</a></h3>
                                     <span class="meta">{{ blog2.date }}, {{ blog2.auth }}</span>
                                     <hr>
                                 </header>
                                 <div class="body">
-                                    {{ blog2.article }}
+                                    <a href="blogPage.html?id={{ blog2.id }}">{{ blog2.introduction | safe }}...</a>
                                 </div>
                                 <div class="clearfix">
                                     <a href="blogPage.html?id={{ blog2.id }}" class="btn btn-clean-one">Read more</a>
@@ -77,13 +79,13 @@
                         <div class="col-md-6 col-sm-6">
                             <article class="blog-teaser">
                                 <header>
-                                    <img src="/static/img/3.jpg" alt="">
+                                    <img src="/static/upload/{{ blog3.picture }}" alt="">
                                     <h3><a href="blogPage.html?id={{ blog3.id }}">{{ blog3.title }}</a></h3>
                                     <span class="meta">{{ blog3.date }}, {{ blog3.auth }}</span>
                                     <hr>
                                 </header>
                                 <div class="body">
-                                    {{ blog3.article }}
+                                    <a href="blogPage.html?id={{ blog3.id }}">{{ blog3.introduction | safe }}...</a>
                                 </div>
                                 <div class="clearfix">
                                     <a href="blogPage.html?id={{ blog3.id }}" class="btn btn-clean-one">Read more</a>
@@ -93,13 +95,13 @@
                         <div class="col-md-6 col-sm-6">
                             <article class="blog-teaser">
                                 <header>
-                                    <img src="/static/img/4.jpg" alt="">
+                                    <img src="/static/upload/{{ blog4.picture }}" alt="">
                                    <h3><a href="blogPage.html?id={{ blog4.id }}">{{ blog4.title }}</a></h3>
                                     <span class="meta">{{ blog4.date }}, {{ blog4.auth }}</span>
                                     <hr>
                                 </header>
                                 <div class="body">
-                                    {{ blog4.article }}
+                                    <a href="blogPage.html?id={{ blog4.id }}">{{ blog4.introduction | safe }}...</a>
                                 </div>
                                 <div class="clearfix">
                                     <a href="blogPage.html?id={{ blog4.id }}" class="btn btn-clean-one">Read more</a>

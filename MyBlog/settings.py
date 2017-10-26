@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BlogApp.apps.BlogappConfig',
+    'DjangoUeditor',
 ]
 
 MIDDLEWARE = [
@@ -128,9 +129,24 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
+
+# UEDITOR setting
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/upload')
+
+MEDIA_URL = '/static/upload/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+UEDITOR_SETTINGS={
+    "config":{
+       #这里放ueditor.config.js里面的配置项.......
+    },
+    "upload":{
+       #这里放php/config.json里面的配置项.......
+    }
+}

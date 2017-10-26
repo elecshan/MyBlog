@@ -13,9 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 from BlogApp import views
+from DjangoUeditor import urls as UEditor_url
 
 urlpatterns = [
     url(r'^admin', admin.site.urls),
@@ -24,5 +25,7 @@ urlpatterns = [
     url(r'^life', views.life),
     url(r'^learn', views.learn),
     url(r'^contact', views.contact),
+    url(r'^processcontact', views.processcontact),
     url(r'^about', views.about),
+    url(r'^ueditor/', include(UEditor_url)),
 ]

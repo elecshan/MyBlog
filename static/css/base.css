@@ -261,8 +261,10 @@ Google Map Style
 Footer Map Style
 ========================================================================== */
 footer {
-  background: #24242a;
-  padding: 60px 0;
+  background: #444444;
+  margin-top: 10px;
+  overflow: hidden;
+  padding: 0;
   text-align: center;
 }
 footer h1 {
@@ -270,7 +272,7 @@ footer h1 {
   font-weight: 300;
 }
 footer .social {
-  margin: 40px 0;
+  margin: 20px 0;
 }
 footer .social a {
   color: #fff;

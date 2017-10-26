@@ -21,7 +21,7 @@
                         <header>
 
                             <div class="lead-image">
-                                <img src="/static/img/{{ blog.picture }}" alt="" class="img-responsive">
+                                <img src="/static/upload/{{ blog.picture }}" alt="" class="img-responsive">
 
                             </div>
                         </header>
@@ -30,9 +30,7 @@
                             <div class="meta">
                                 <i class="fa fa-user"></i> {{ blog.auth }} <i class="fa fa-calendar"></i>{{ blog.date }}<i class="fa fa-comments"></i><span class="data"><a href="#comments">{{ blog.num_comment }} Comments</a></span>
                             </div>
-                            <p>
-                                {{ blog.article }}
-                            </p>
+                                {{ blog.article | safe}}
                         </div>
                     </article>
 
