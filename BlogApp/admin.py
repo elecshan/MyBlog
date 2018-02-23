@@ -1,11 +1,13 @@
 from django.contrib import admin
-from BlogApp.models import Blog, Comment, Tag, Learn
+from BlogApp.models import Article, Category, Tag
 
 # Register your models here.
-class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'auth', 'date')
 
-admin.site.register(Blog, ArticleAdmin)
-admin.site.register(Learn, ArticleAdmin)
-admin.site.register(Comment)
+
+class ArticleAdmin(admin.ModelAdmin):
+    fields = ('title', 'body', 'status', 'abstract', 'topped', 'category', 'tags')
+
+
+admin.site.register(Article, ArticleAdmin)
+admin.site.register(Category)
 admin.site.register(Tag)

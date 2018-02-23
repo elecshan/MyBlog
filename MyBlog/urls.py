@@ -15,17 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from BlogApp import views
-from DjangoUeditor import urls as UEditor_url
+
 
 urlpatterns = [
-    url(r'^admin', admin.site.urls),
-    url(r'^home', views.home),
-    url(r'^blogPage', views.getBlogPage),
-    url(r'^life', views.life),
-    url(r'^learn', views.learn),
-    url(r'^contact', views.contact),
-    url(r'^processcontact', views.processcontact),
-    url(r'^about', views.about),
-    url(r'^ueditor/', include(UEditor_url)),
+    url(r'^admin/', admin.site.urls),
+    url(r'^blog/', include('BlogApp.urls'))
 ]

@@ -5,5 +5,5 @@ from django.test import TestCase, Client
 class blogTest(TestCase):
     def test(self):
         c = Client()
-        response = c.get('/blog')
+        response = c.get('/BlogApp')
         print('well')

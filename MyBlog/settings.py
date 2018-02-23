@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BlogApp.apps.BlogappConfig',
-    'DjangoUeditor',
 ]
 
 MIDDLEWARE = [
@@ -85,9 +84,9 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'blog.mysql',
+        'NAME': 'blog',
         'USER': 'xgs',
-        'PASSWORD': 'xgss7163994',
+        'PASSWORD': 'xgs21710131',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -116,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hans'
 
 TIME_ZONE = 'UTC'
 
@@ -124,29 +123,15 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
+
+ADMINS = (
+    ('xgs', 'xgs951230@gmail.com'),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_URL = '/static/'
-
-# UEDITOR setting
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/upload')
-
-MEDIA_URL = '/static/upload/'
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
-
-UEDITOR_SETTINGS={
-    "config":{
-       #这里放ueditor.config.js里面的配置项.......
-    },
-    "upload":{
-       #这里放php/config.json里面的配置项.......
-    }
-}
