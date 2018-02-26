@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+            <main class="col-md-12">
+                {% for post in article_list %}
+                <article class="post post-{{ post.id }}">
+                    <header class="entry-header">
+                        <h2 class="entry-title">
+                            <a href="{% url 'article_page' post.id %}">{{ post.title }}</a>
+                        </h2>
+                        <div class="entry-meta">
+                            <span class="post-category"><a href="{% url 'category' post.category.id %}">
+                                <i class="icon ion-navigate"></i> {{ post.category.name }}</a></span>
+                            <span class="post-date"><time class="entry-date" datetime="{{ post.create_time }}">
+                                <i class="icon ion-calendar"></i> {{ post.create_time.date }}</time></span>
+                            <span class="post-author"><a href="{% url 'index' %}"><i class="icon ion-person"></i> 山上人家</a></span>
+                            <span class="views-count"><i class="icon ion-eye"></i> {{ post.views }} 阅读</span>
+                        </div>
+                    </header>
+                    <div class="entry-content clearfix abstract">
+                        <p>{{ post.abstract }}...</p>
+                        <div class="read-more cl-effect-14">
+                            <a href="{% url 'article_page' post.id %}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+                        </div>
+                    </div>
+                </article>
+                {% empty %}
+                    <div class="no-post">暂时还没有发布文章！</div>
+                {% endfor %}
+            </main>
+        </div>
+    </div>
+</div>
+{% endblock %}
